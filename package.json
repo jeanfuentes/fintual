@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "fintual",
   "main": "index.js",
+  "dependencies": {
+    "axios": "^1.7.2"
+  },
   "author": "Jean Fuentes (https://github.com/jeanfuentes)",
   "license": "MIT",
   "homepage": "https://github.com/jeanfuentes/fintual#readme",
