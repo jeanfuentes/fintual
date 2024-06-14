@@ -12,7 +12,6 @@ const getGoals = async (email, token) => {
   const { data } = await axios.get(
     `${config.goalsURL}?user_email=${email}&user_token=${token}`
   );
-  console.log(JSON.stringify(data.data, null, 2));
   const goals = data.data.map((goal) => {
     const attributes = goal.attributes;
     return {
@@ -33,6 +32,6 @@ exports.Fintual = async ({ email, password }) => {
       getGoals: () => getGoals(email, token),
     };
   } catch (err) {
-    throw new Error("Error: check your credentials");
+    throw new Error("Check your credentials");
   }
 };
