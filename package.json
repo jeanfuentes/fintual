@@ -2,10 +2,22 @@
   "name": "fintual",
   "version": "1.0.2",
   "description": "fintual",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
   "dependencies": {
     "axios": "^1.7.2"
   },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "type": "module",
   "author": "Jean Fuentes (https://github.com/jeanfuentes)",
   "license": "MIT",
   "homepage": "https://github.com/jeanfuentes/fintual#readme",

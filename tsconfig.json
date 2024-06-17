@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "outDir": "lib",
+    "baseUrl": "src",
+    "paths": {
+      "@token/*": ["token/*"],
+      "@goals/*": ["goals/*"]
+    }
+  }
+}
