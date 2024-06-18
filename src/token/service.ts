@@ -1,5 +1,5 @@
 import axios from "axios";
-import { TokenResponse } from "@token/models/token.response";
+import { TokenResponse } from "./models/token.response";
 
 const endpoint = "https://fintual.cl/api/access_tokens";
 

@@ -1,6 +1,6 @@
 import axios from "axios";
-import { Goal } from "@goals/models/goal";
-import { GoalsResponse } from "@goals/models/goals.response";
+import { Goal, toGoal } from "./models/goal";
+import { GoalReponse } from "./models/goal.response";
 
 const endpoint = "https://fintual.cl/api/goals";
 
@@ -8,18 +8,21 @@ export const getGoals = async (
   email: string,
   token: string
 ): Promise<Goal[]> => {
-  const { data } = await axios.get<GoalsResponse>(
+  const { data } = await axios.get<{ data: GoalReponse[] }>(
     `${endpoint}?user_email=${email}&user_token=${token}`
   );
-  const goals = data.data.map((goal) => {
-    const attributes = goal.attributes;
-    return {
-      id: goal.id,
-      name: attributes.name_without_suffix,
-      createdAt: attributes.created_at,
-      deposited: attributes.deposited,
-      profit: attributes.profit,
-    };
-  });
+  const goals = data.data.map(toGoal);
   return goals;
+};
+
+export const getGoal = async (
+  email: string,
+  token: string,
+  id: string
+): Promise<Goal> => {
+  const { data } = await axios.get<{ data: GoalReponse }>(
+    `${endpoint}/${id}?user_email=${email}&user_token=${token}`
+  );
+  const goal = toGoal(data.data);
+  return goal;
 };

@@ -17,7 +17,6 @@
     "lib",
     "README.md"
   ],
-  "type": "module",
   "author": "Jean Fuentes (https://github.com/jeanfuentes)",
   "license": "MIT",
   "homepage": "https://github.com/jeanfuentes/fintual#readme",

@@ -7,11 +7,6 @@
     "strict": true,
     "skipLibCheck": true,
     "declaration": true,
-    "outDir": "lib",
-    "baseUrl": "src",
-    "paths": {
-      "@token/*": ["token/*"],
-      "@goals/*": ["goals/*"]
-    }
+    "outDir": "lib"
   }
 }
