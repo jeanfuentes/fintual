@@ -1,6 +1,8 @@
 ## Installation
 
-`npm install fintual`
+```bash
+npm install fintual
+```
 
 ## Usage
 
@@ -12,11 +14,10 @@ const client = await Fintual({
   password: "<user password>",
 });
 
-// Get user goals
+// Goals module
 const goals = await client.getGoals();
-console.table(goals);
-
-// Get user goal by id
 const goal = await client.getGoal("<goal id>");
-console.log(goal);
+
+// Assets module
+const asset = await client.getAsset(245);
 ```
