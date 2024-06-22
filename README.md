@@ -13,14 +13,43 @@ const client = await Fintual({
   email: "<user email>",
   password: "<user password>",
 });
+```
 
-// Goals module
+```js
+// Get user goals
 const goals = await client.getGoals();
-const goal = await client.getGoal("<goal id>");
+```
 
-// Assets module
-const asset = await client.getAsset(245);
+```json
+[
+  {
+    "id": "111111",
+    "name": "Inbox",
+    "deposited": 12345,
+    "profit": 1000,
+    ...
+  },
+  {
+    "id": "222222",
+    "name": "APV A",
+    "deposited": 12345,
+    "profit": 1000,
+    ...
+  }
+]
+```
 
-// Banks module
-const banks = await client.getBanks();
+```js
+// Get user goal by id
+const goal = await client.getGoal("111111");
+```
+
+```json
+{
+  "id": "111111",
+  "name": "Inbox",
+  "deposited": 12345,
+  "profit": 1000,
+  ...
+}
 ```
