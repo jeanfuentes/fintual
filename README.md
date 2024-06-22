@@ -52,3 +52,11 @@ const goal = await client.getGoal("111111");
   "profit": 1000
 }
 ```
+
+```js
+// Get banks
+const banks = await client.getBanks();
+
+// Get asset
+const asset = await client.getAsset(245);
+```
