@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "nodemon src/index.ts",
     "build": "tsc",
-    "publish": "rm -rf lib/ && npm run build && npm publish"
+    "deploy": "rm -rf lib/ && npm run build && npm publish"
   },
   "dependencies": {
     "axios": "^1.7.2"
