@@ -1,7 +1,7 @@
 import { Credentials } from "./models/credentials";
 import { Client } from "./models/client";
 import { getAccessToken } from "./modules/auth/service";
-import { getGoals, getGoal } from "./modules/goals/service";
+import { getGoals, getGoal } from "./modules/goals";
 import { getAsset } from "./modules/funds/service";
 
 export const Fintual = async ({

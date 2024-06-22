@@ -1,3 +1,5 @@
+import { Investment } from "./investment";
+
 export interface Goal {
   id: string;
   name: string;
@@ -6,9 +8,5 @@ export interface Goal {
   hidden: boolean;
   profit: number;
   regime: string;
-  investments: {
-    id: number;
-    name: string;
-    weight: number;
-  }[];
+  investments: Investment[];
 }
