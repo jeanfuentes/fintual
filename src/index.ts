@@ -1,13 +1,13 @@
-import { Credentials } from "./models/credentials";
-import { Client } from "./models/client";
-import { getAccessToken } from "./modules/auth/service";
+import { getAccessToken } from "./modules/auth";
 import { getGoals, getGoal } from "./modules/goals";
-import { getAsset } from "./modules/funds/service";
+import { getAsset } from "./modules/funds";
 
-export const Fintual = async ({
-  email,
-  password,
-}: Credentials): Promise<Client> => {
+interface Credentials {
+  email: string;
+  password: string;
+}
+
+export const Fintual = async ({ email, password }: Credentials) => {
   try {
     const token = await getAccessToken(email, password);
     return {

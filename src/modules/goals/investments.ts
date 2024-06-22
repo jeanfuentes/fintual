@@ -1,4 +1,4 @@
-import { getAsset } from "../funds/service";
+import { getAsset } from "../funds";
 import { FintualInvestment } from "./models/fintual.investment";
 import { Investment } from "./models/investment";
 
