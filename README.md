@@ -1,5 +1,9 @@
 > A wrapper for the [Fintual API](https://fintual.cl/api-docs/index.html)
 
+![NPM Version](https://img.shields.io/npm/v/fintual?style=flat-square)
+![NPM Downloads](https://img.shields.io/npm/d18m/fintual?style=flat-square)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/fintual?style=flat-square)
+
 ## Installation
 
 ```bash
