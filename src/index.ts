@@ -1,17 +1,19 @@
-import { getToken } from "./token/service";
-import { getGoals, getGoal } from "./goals/service";
+import { Credentials } from "./models/credentials";
+import { Client } from "./models/client";
+import { getAccessToken } from "./modules/auth/service";
+import { getGoals, getGoal } from "./modules/goals/service";
+import { getAsset } from "./modules/funds/service";
 
-interface Credentials {
-  email: string;
-  password: string;
-}
-
-export const Fintual = async ({ email, password }: Credentials) => {
+export const Fintual = async ({
+  email,
+  password,
+}: Credentials): Promise<Client> => {
   try {
-    const token = await getToken(email, password);
+    const token = await getAccessToken(email, password);
     return {
       getGoals: () => getGoals(email, token),
       getGoal: (id: string) => getGoal(email, token, id),
+      getAsset: (id: string) => getAsset(id),
     };
   } catch (err) {
     throw new Error("Check your credentials");
