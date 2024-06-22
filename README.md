@@ -1,3 +1,5 @@
+> A wrapper for the [Fintual API](https://fintual.cl/api-docs/index.html)
+
 ## Installation
 
 ```bash
