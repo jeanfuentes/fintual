@@ -1,7 +1,7 @@
 {
   "name": "fintual",
   "version": "1.0.7",
-  "description": "fintual",
+  "description": "A wrapper for the Fintual API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {

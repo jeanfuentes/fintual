@@ -26,17 +26,16 @@ const goals = await client.getGoals();
     "id": "111111",
     "name": "Inbox",
     "deposited": 12345,
-    "profit": 1000,
-    ...
+    "profit": 1000
   },
   {
     "id": "222222",
     "name": "APV A",
     "deposited": 12345,
-    "profit": 1000,
-    ...
+    "profit": 1000
   }
 ]
+// createdAt, hidden, regime, investments: [{ id, name, weight }]
 ```
 
 ```js
@@ -49,7 +48,7 @@ const goal = await client.getGoal("111111");
   "id": "111111",
   "name": "Inbox",
   "deposited": 12345,
-  "profit": 1000,
-  ...
+  "profit": 1000
 }
+// createdAt, hidden, regime, investments: [{ id, name, weight }]
 ```
