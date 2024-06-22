@@ -20,4 +20,7 @@ const goal = await client.getGoal("<goal id>");
 
 // Assets module
 const asset = await client.getAsset(245);
+
+// Banks module
+const banks = await client.getBanks();
 ```
