@@ -35,7 +35,6 @@ const goals = await client.getGoals();
     "profit": 1000
   }
 ]
-// createdAt, hidden, regime, investments: [{ id, name, weight }]
 ```
 
 ```js
@@ -50,5 +49,4 @@ const goal = await client.getGoal("111111");
   "deposited": 12345,
   "profit": 1000
 }
-// createdAt, hidden, regime, investments: [{ id, name, weight }]
 ```
