@@ -4,5 +4,5 @@ import { Asset } from "./asset";
 export interface Client {
   getGoals: () => Promise<Goal[]>;
   getGoal: (id: string) => Promise<Goal>;
-  getAsset: (id: string) => Promise<Asset>;
+  getAsset: (id: number) => Promise<Asset>;
 }

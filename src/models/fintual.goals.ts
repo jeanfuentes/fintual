@@ -8,11 +8,11 @@ export interface FintualGoals {
       deposited: number;
       hidden: boolean;
       profit: number;
+      regime: string;
       investments: {
         weight: number;
         asset_id: number;
       }[];
-      regime: string;
     };
   }[];
 }

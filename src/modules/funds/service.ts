@@ -2,7 +2,7 @@ import axios from "../../config/axios";
 import { Asset } from "../../models/asset";
 import { FintualAsset } from "../../models/fintual.asset";
 
-export const getAsset = async (id: string): Promise<Asset> => {
+export const getAsset = async (id: number): Promise<Asset> => {
   const { data } = await axios.get<FintualAsset>(`/real_assets/${id}`);
   const asset = data.data;
   const attributes = asset.attributes;

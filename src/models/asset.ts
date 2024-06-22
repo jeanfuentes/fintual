@@ -1,5 +1,5 @@
 export interface Asset {
-  id: string;
+  id: number;
   type: string;
   name: string;
   symbol: string;

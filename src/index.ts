@@ -13,7 +13,7 @@ export const Fintual = async ({
     return {
       getGoals: () => getGoals(email, token),
       getGoal: (id: string) => getGoal(email, token, id),
-      getAsset: (id: string) => getAsset(id),
+      getAsset: (id: number) => getAsset(id),
     };
   } catch (err) {
     throw new Error("Check your credentials");

@@ -6,4 +6,9 @@ export interface Goal {
   hidden: boolean;
   profit: number;
   regime: string;
+  investments: {
+    id: number;
+    name: string;
+    weight: number;
+  }[];
 }

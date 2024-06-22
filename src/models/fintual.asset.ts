@@ -1,6 +1,6 @@
 export interface FintualAsset {
   data: {
-    id: string;
+    id: number;
     type: string;
     attributes: {
       name: string;
