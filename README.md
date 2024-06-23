@@ -29,4 +29,8 @@ const goal = await getGoal({ email, token }, "<goal id>");
 
 // https://fintual.cl/api/banks
 const banks = await getBanks();
+
+// https://fintual.cl/api/real_assets/${id}
+// goal -> attributes -> investment -> asset_id
+const asset = await getAsset("<asset id>");
 ```
