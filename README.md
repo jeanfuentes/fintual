@@ -13,7 +13,7 @@ npm install fintual
 ## Usage
 
 ```js
-import { getAccessToken, getGoals, getGoal, getBanks } from "fintual";
+import { getAccessToken, getGoals, getGoal, getBanks, getAsset } from "fintual";
 
 const email = "<user email>";
 const password = "<user password>";
