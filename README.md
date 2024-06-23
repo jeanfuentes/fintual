@@ -13,54 +13,20 @@ npm install fintual
 ## Usage
 
 ```js
-import { Fintual } from "fintual";
+import { getAccessToken, getGoals, getGoal, getBanks } from "fintual";
 
-const client = await Fintual({
-  email: "<user email>",
-  password: "<user password>",
-});
-```
+const email = "<user email>";
+const password = "<user password>";
 
-```js
-// Get user goals
-const goals = await client.getGoals();
-```
+// https://fintual.cl/api/access_tokens
+const token = await getAccessToken({ email, password });
 
-```json
-[
-  {
-    "id": "111111",
-    "name": "Inbox",
-    "deposited": 12345,
-    "profit": 1000
-  },
-  {
-    "id": "222222",
-    "name": "APV A",
-    "deposited": 12345,
-    "profit": 1000
-  }
-]
-```
+// https://fintual.cl/api/goals?user_email=${email}&user_token=${token}
+const goals = await getGoals({ email, token });
 
-```js
-// Get user goal by id
-const goal = await client.getGoal("111111");
-```
+// https://fintual.cl/api/goals/${id}?user_email=${email}&user_token=${token}
+const goal = await getGoal({ email, token }, "<goal id>");
 
-```json
-{
-  "id": "111111",
-  "name": "Inbox",
-  "deposited": 12345,
-  "profit": 1000
-}
-```
-
-```js
-// Get banks
-const banks = await client.getBanks();
-
-// Get asset
-const asset = await client.getAsset(245);
+// https://fintual.cl/api/banks
+const banks = await getBanks();
 ```
