@@ -25,7 +25,7 @@ const goals = await getGoals({ email, token });
 const goal = await getGoalById({ email, token }, "<goal id>");
 ```
 
-```json
+```jsonc
 // Goals response
 [
   {
