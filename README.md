@@ -13,24 +13,14 @@ npm install fintual
 ## Usage
 
 ```js
-import { getAccessToken, getGoals, getGoal, getBanks, getAsset } from "fintual";
+import { getAccessToken, getGoals, getGoalById } from "fintual";
 
 const email = "<user email>";
 const password = "<user password>";
 
-// https://fintual.cl/api/access_tokens
 const token = await getAccessToken({ email, password });
 
-// https://fintual.cl/api/goals?user_email=${email}&user_token=${token}
 const goals = await getGoals({ email, token });
 
-// https://fintual.cl/api/goals/${id}?user_email=${email}&user_token=${token}
-const goal = await getGoal({ email, token }, "<goal id>");
-
-// https://fintual.cl/api/banks
-const banks = await getBanks();
-
-// https://fintual.cl/api/real_assets/${id}
-// goal -> attributes -> investment -> asset_id
-const asset = await getAsset("<asset id>");
+const goal = await getGoalById({ email, token }, "<goal id>");
 ```
