@@ -24,3 +24,37 @@ const goals = await getGoals({ email, token });
 
 const goal = await getGoalById({ email, token }, "<goal id>");
 ```
+
+```json
+// Goals response
+[
+  {
+    "id": "111",
+    "attributes": {
+      "name": "Goal #1",
+      "deposited": 125000,
+      "profit": 15000
+      // ...
+    }
+  },
+  {
+    "id": "222"
+    // ...
+  },
+  {
+    "id": "333"
+    // ...
+  }
+]
+
+// Goal by id response
+{
+  "id": "85234",
+  "attributes": {
+    "name": "Travel",
+    "deposited": 3000000,
+    "profit": 250000
+    // ...
+  }
+}
+```
