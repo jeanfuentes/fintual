@@ -15,10 +15,13 @@ npm install fintual
 ```js
 import { getAccessToken, getGoals, getGoalById } from "fintual";
 
-const email = "<user email>";
-const password = "<user password>";
+// You have to save this token
+const token = await getAccessToken({
+  email: "<user email>",
+  password: "<user email>",
+});
 
-const token = await getAccessToken({ email, password });
+// The API requires email and token in every request
 
 const goals = await getGoals({ email, token });
 
