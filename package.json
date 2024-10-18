@@ -1,7 +1,7 @@
 {
   "name": "fintual",
-  "version": "2.0.1",
-  "description": "fintual",
+  "version": "2.0.2",
+  "description": "A wrapper for the Fintual API",
   "main": "fintual.js",
   "scripts": {
     "dev": "nodemon src/fintual.js"
