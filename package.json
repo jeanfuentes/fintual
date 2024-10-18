@@ -9,6 +9,12 @@
   "devDependencies": {
     "nodemon": "3.1.7"
   },
+  "files": [
+    "fintual.js",
+    "config.js",
+    "modules/",
+    "README.md"
+  ],
   "homepage": "https://github.com/jeanfuentes/fintual",
   "author": "Jean Fuentes",
   "license": "MIT"
