@@ -2,12 +2,9 @@
   "name": "fintual",
   "version": "2.0.0",
   "description": "fintual",
-  "main": "index.js",
+  "main": "fintual.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
-  },
-  "dependencies": {
-    "axios": "1.7.7"
+    "dev": "nodemon src/fintual.js"
   },
   "devDependencies": {
     "nodemon": "3.1.7"
